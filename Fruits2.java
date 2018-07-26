@@ -10,6 +10,5 @@ public class Fruits2 {
 		for (String fruit : fruits) {
 			System.out.println(fruit);
 		}
-		fruits.forEach(i -> System.out.println(i));
 	}
 }
