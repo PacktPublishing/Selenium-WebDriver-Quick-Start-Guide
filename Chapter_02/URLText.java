@@ -1,4 +1,4 @@
-public class URLTest {
+public class URLText {
  public static void main(String[] args) {
      System.setProperty("webdriver.chrome.driver",
          "C:\\SeleniumWD\\src\\main\\resources\\chromedriver.exe");
