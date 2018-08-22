@@ -1,0 +1,10 @@
+public void switchWindowByTitle(String expectedTitle){
+    Set<String> windowHandles = driver.getWindowHandles();
+    Iterator it = windowHandles.iterator();
+    while (it.hasNext()){
+         driver.switchTo(it.next());
+         if (driver.getTitle().equalsIgnoreCase(expectedTitle)){
+             break;
+         }
+    } 
+}
