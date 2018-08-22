@@ -1,0 +1,40 @@
+
+<html><html>
+  <head>  <head>
+    <style>    <style>
+        .message {        .message {
+             position: absolute;             position: absolute;
+             top: 145px;             top: 145px;
+             width: 60%;             width: 60%;
+             left: 20%;             left: 20%;
+             background: #ff9;             background: #ff9;
+             border: 1px solid #fc0;             border: 1px solid #fc0;
+             font-size: 150%;             font-size: 150%;
+             padding: 15px 50px;             padding: 15px 50px;
+        }        }
+        .message p {        .message p {
+             margin: 0;             margin: 0;
+             padding: 0 40px 0 20px;             padding: 0 40px 0 20px;
+             text-align: center;             text-align: center;
+}}
+     </style>     </style>
+    </head>    </head>
+    <body>    <body>
+        <div class="message">        <div class="message">
+            <p>This is a non-modal alert</p>            <p>This is a non-modal alert</p>
+        </div>        </div>
+        <script src="C:\Users\Bhagyashree\Documents\jquery-3.3.1.min.js">                    </script>        <script src="C:\Users\Bhagyashree\Documents\jquery-3.3.1
+        <script>
+            $(document).ready(function(e) {
+                 // Check if there's a message 
+                 if($('.message').length) {
+                 // If mouse is clicked, moved or a key is pressed
+                 $(document).one('click mousemove keypress', function(e) {
+                 // Fade the message away after 500 ms
+                 $('.message').animate({ opacity: 1.0 }, 500).fadeOut();
+                 });
+              }
+            });
+        </script>
+    </body>
+</html>
