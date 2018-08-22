@@ -1,0 +1,21 @@
+<html>
+ <head>
+     <script type="text/javascript">
+         function display_alerts(){
+             var text1;
+			 if (confirm("Click")) {
+				text1 = "Ok was pressed";
+			 } else {
+				text1 = "Cancel was pressed";
+			 }
+			 document.getElementById("disptext").innerHTML = text1;
+			 
+         }
+     </script>
+ </head>
+ <body>
+     <input type = "text" id = "text1"/>
+     <input type = "button" onclick="display_alerts()" value="Display Alert" id="dispalert" />
+	 <p id="disptext"/>
+	 </body>
+</html>
