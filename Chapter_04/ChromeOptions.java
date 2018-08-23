@@ -1,0 +1,11 @@
+ChromeOptions options = new ChromeOptions();
+ Map<String, Object> prefs = new HashMap<String, Object>();
+ prefs.put("credentials_enable_service", false);
+ prefs.put("profile.password_manager_enabled", false);
+ options.addArguments("disable-extensions");
+ options.addArguments("--start-maximized");
+ options.setExperimentalOption("prefs", prefs);
+ System.out.println("Before logging");
+ logMessage(log, "Opening Browser");
+ System.out.println("After logging");
+ driver = new ChromeDriver(options);
