@@ -1,0 +1,30 @@
+<html>
+ <body>
+     <button onclick="timerText()">Timer Start</button>
+     <p id="demoText">Click on Timer Start</p>
+     <script>
+         function timerText() {
+             setTimeout(displaySelenium,3000);
+             setTimeout(displayUFT,6000);
+             setTimeout(displayAppium,9000);
+             setTimeout(displaySilkTest,12000);
+             setTimeout(displayCucumber,15000);
+         }
+         function displaySelenium() {
+             document.getElementById("demoText").innerHTML="Selenium WebDriver";
+         }
+         function displayUFT() {
+             document.getElementById("demoText").innerHTML="Unified Functional                 Test";
+         }
+         function displayAppium() {
+             document.getElementById("demoText").innerHTML="Appium";
+         }
+         function displaySilkTest() {
+             document.getElementById("demoText").innerHTML="Silk Test";
+         }
+         function displayCucumber() {
+             document.getElementById("demoText").innerHTML="Cucumber Framework";
+         }
+     </script>
+   </body>
+</html>
