@@ -1,0 +1,6 @@
+Predicate<WebDriver> pred = new Predicate<WebDriver>()
+{
+    public boolean apply(WebDriver arg0) {
+        return false;
+    }
+};
