@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Demo</title>
+			<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('h2').dblclick(function(){
+			$('p').show();
+			})
+		});
+  </script>
+
+  <style>
+	p {
+		display:none;
+	}
+  </style>
+</head>
+<body>
+	<h2>Double click Here!</h2>
+	<p id="txtPara">This is some sample text</p>
+
+</body>
+</html>
