@@ -59,11 +59,11 @@
       <artifactId>guava</artifactId>
       <version>22.0</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium.grid/selenium-grid-hub -->
+<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 <dependency>
-    <groupId>org.seleniumhq.selenium.grid</groupId>
-    <artifactId>selenium-grid-hub</artifactId>
-    <version>1.0.5</version>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-server</artifactId>
+    <version>3.14.0</version>
 </dependency>
 
 </dependencies>
