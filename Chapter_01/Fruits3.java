@@ -3,7 +3,7 @@ package org.packt.selenium;
 import java.util.Arrays;
 import java.util.List;
 
-public class Fruits2 {
+public class Fruits3 {
 	public static void main(String[] args) {
 		List<String> fruits = Arrays.asList("Apples", "Oranges", "Bananas",
 				"Pears");
