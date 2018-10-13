@@ -23,23 +23,22 @@ public class TestBase {
 	}
 
 	public static void sendKeys(WebElement element, String text) {
-		wdWait.until(ExpectedConditions.visibilityOf(element));
-		element.clear();
-		element.sendKeys(text);
+    try {
+            wdWait.until(ExpectedConditions.visibilityOf(element));
+            element.clear();
+            element.sendKeys(text);
+    } catch (NoSuchElementException e){
+        throw new NoSuchElementException();
+    }
 	}
 
-	public static void sendKeysActions(Actions element, String text) {
-		element.sendKeys(text);
-	}
 
 	public static void sendKeysTAB(WebElement element, Keys text) {
 		element.sendKeys(text);
 	}
 
 	public static void clickElement(WebElement element) {
-		wdWait.until(ExpectedConditions.elementToBeClickable(element));
-		scrollintoviewJS(element);
-		element.click();
+		wdWait.until(ExpectedConditions.elementToBeClickable(element)).click();
 	}
 
 	public static void selectDrpdwnData(WebElement element, String drpdwnData) {
@@ -60,7 +59,7 @@ public class TestBase {
 			String drpdwnData) {
 		List<WebElement> optionList = new Select(element).getOptions();
 		for (WebElement options : optionList) {
-			if (options.getText().contains(drpdwnData)) {
+			if (options.getText().equalsIgnoreCase(drpdwnData)) {
 				options.click();
 			}
 		}
@@ -142,11 +141,14 @@ public class TestBase {
 	}
 
 	public static boolean ajaxState() {
-		while (true) {
+		int counter = 0;
+		while (counter < 10) {
 			ajaxIsComplete = (Boolean) ((JavascriptExecutor) driver)
 					.executeScript("return jQuery.active == 0");
 			if (ajaxIsComplete) {
 				break;
+			} else {
+				counter = counter + 1;
 			}
 		}
 		return ajaxIsComplete;
