@@ -5,7 +5,6 @@ public class TestBase {
 	protected static Actions actions = null;
 	protected static JavascriptExecutor js = null;
 	protected static WebDriverWait wdWait = null;
-	protected static Robot robot = null;
 	static String reportFileName = null;
 	protected static Map<String, String> resultMap = new HashMap<String, String>();
 	protected static Fillo fillo = null;
