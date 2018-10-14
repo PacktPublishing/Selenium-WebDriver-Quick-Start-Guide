@@ -1,50 +1,46 @@
-public class OpenBrowser extends AActionKeyword {
-	static RemoteWebDriver driver;
-	static DesiredCapabilities capabilities;
-
-	public WebDriver openBrowser(List<String> browserName) {
+	public WebDriver openBrowser(List<String> browserName)
+			throws MalformedURLException {
 		if (browserName.get(0).equalsIgnoreCase("chrome")) {
-			/*
-			 * System.setProperty("webdriver.chrome.driver",
-			 * System.getProperty("user.dir") +
-			 * "\\src\\main\\resources\\chromedriver.exe");
-			 */
-			capabilities = DesiredCapabilities.chrome();
+			log.info("Executing openBrowser");
+			System.setProperty("webdriver.chrome.driver",
+					System.getProperty("user.dir")
+							+ "\\src\\main\\resources\\chromedriver.exe");
+
+			// driver = new ChromeDriver();
+			// capabilities.setBrowserName("chrome");
 			try {
 				driver = new RemoteWebDriver(new URL(
-						"http://localhost:4444/wd/hub"), capabilities);
+						"http://localhost:4444/wd/hub"),
+						DesiredCapabilities.chrome());
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		} else if (browserName.get(0).equalsIgnoreCase("ie")) {
-			/*
-			 * System.setProperty("webdriver.ie.driver",
-			 * System.getProperty("user.dir") +
-			 * "\\src\\main\\resources\\IEDriverServer.exe");
-			 */capabilities = DesiredCapabilities.internetExplorer();
+			System.setProperty("webdriver.ie.driver",
+					System.getProperty("user.dir")
+							+ "\\src\\main\\resources\\IEDriverServer.exe");
+
+			// driver = new InternetExplorerDriver();
+			capabilities.setBrowserName("IE");
 			try {
 				driver = new RemoteWebDriver(new URL(
-						"http://localhost:4444/wd/hub"), capabilities);
+						"http://localhost:4444/wd/hub"),
+						DesiredCapabilities.internetExplorer());
 			} catch (MalformedURLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
 		} else if (browserName.get(0).equalsIgnoreCase("firefox")) {
-			/*
-			 * System.setProperty("webdriver.gecko.driver",
-			 * System.getProperty("user.dir") +
-			 * "\\src\\main\\resources\\geckodriver.exe");
-			 */
-			capabilities = DesiredCapabilities.firefox();
-			try {
-				driver = new RemoteWebDriver(new URL(
-						"http://localhost:4444/wd/hub"), capabilities);
-			} catch (MalformedURLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+
+			System.setProperty("webdriver.gecko.driver",
+					System.getProperty("user.dir")
+							+ "\\src\\main\\resources\\geckodriver.exe");
+			// driver = new FirefoxDriver();
+			driver = new RemoteWebDriver(
+					new URL("http://localhost:4444/wd/hub"),
+					DesiredCapabilities.firefox());
 		}
 
 		return driver;
