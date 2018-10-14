@@ -1,11 +1,15 @@
 public class NewBrowser extends ACommand {
-        private IActionKeyword actionKeyword = null;
-        static WebDriver driver;
-        public NewBrowser(IActionKeyword actionKeyword) {
-                this.actionKeyword = actionKeyword;
-        }
-        public WebDriver execute() {
-                driver = actionKeyword.openBrowser();
-                return driver;
-        }
+	private AActionKeyword actionKeyword = null;
+	static WebDriver driver;
+
+	public NewBrowser(AActionKeyword actKeyword) {
+		this.actionKeyword = actKeyword;
+	}
+
+	public WebDriver execute(List<String> browsers)
+			throws MalformedURLException {
+		driver = actionKeyword.openBrowser(browsers);
+		return driver;
+	}
+
 }
