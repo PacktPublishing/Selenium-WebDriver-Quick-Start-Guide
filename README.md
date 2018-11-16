@@ -64,9 +64,7 @@ Click on the following link to see the Code in Action:
 
 * Selenium WebDriver 3 Practical Guide - Second Edition [[Packt]](https://www.packtpub.com/web-development/selenium-webdriver-3-practical-guide-second-edition?utm_source=github&utm_medium=repository&utm_campaign=9781788999762) [[Amazon]](https://www.amazon.com/dp/1788999762)
 
-## Get to Know the Author(s)
-**Author Name**
-Bio
+## Get to Know the Author
 
 **Pinakin Chaubal**
 is a BE (Computer Science) with more than 18 years of experience in the IT industry. He is a PMP-certified professional and has worked with employers such as Patni, Accenture, L&T Infotech, and Polaris. He is currently working as a automation architect at Intellect Design Arena Ltd. (the product wing of Polaris). He has designed several frameworks using various techniques, including hybrid, keyword-driven, Page Object Model, and BDD, with Cucumber and Java. He has written one independently published book on Page Object Model using Selenium WebDriver and Java. He has been a reviewer for two books published by Packt. He has his own YouTube channel called Automation Geek, which covers various concepts related to testing and automation.
